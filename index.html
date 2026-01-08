@@ -1,15 +1,10 @@
 <!DOCTYPE html><html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge List</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial Black', Arial, sans-serif;
-    }body {
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial Black', Arial, sans-serif; }body {
   min-height: 100vh;
   background: linear-gradient(180deg, #19e6e0, #0a5c7d);
   color: white;
@@ -36,27 +31,53 @@ header {
   padding: 20px 24px;
   margin-bottom: 18px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  box-shadow: 0 8px 0 #000;
-}
-
-.left {
-  display: flex;
   align-items: center;
-  gap: 16px;
+  box-shadow: 0 8px 0 #000;
+  transition: transform 0.2s;
 }
 
-.rank {
-  font-size: 28px;
-  background: #000;
-  padding: 10px 16px;
-  border-radius: 10px;
+.challenge:hover {
+  transform: translateY(-4px);
 }
 
 .title {
   font-size: 24px;
+  font-weight: bold;
 }
 
 .difficulty {
-  padding:
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.easy { background: #7CFF7C; }
+.medium { background: #FFD966; }
+.hard { background: #FF7C7C; }
+.extreme { background: #B77CFF; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .challenge { flex-direction: column; gap: 10px; }
+  .title { font-size: 20px; text-align: center; }
+  .difficulty { font-size: 16px; padding: 6px 12px; }
+}
+
+  </style>
+</head>
+<body>  <header>Challenge List</header>  <div class="container">
+    <!-- Пример челленджей, можно добавлять свои -->
+    <div class="challenge">
+      <div class="title">Первый челлендж</div>
+      <div class="difficulty easy">Easy</div>
+    </div><div class="challenge">
+  <div class="
